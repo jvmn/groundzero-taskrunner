@@ -1,7 +1,15 @@
 
  *** 
 
-# [1.0.0](https://github.com/jvmn/groundzero-taskrunner/compare/1.0.0...1.1.0) (29.01.2019)
+# [1.0.1](https://github.com/jvmn/groundzero-taskrunner/compare/1.0.0...1.0.1) (29.01.2019)
+
+ ### Bug Fixes
+
+* **pkg:**  correctly set dependencies as devDependencies to resolve paths ([8473e68](https://github.com/jvmn/groundzero-taskrunner/commit/8473e68)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @29.01.2019_
+
+ *** 
+
+# [1.0.0](https://github.com/jvmn/groundzero-taskrunner/compare/1.0.0...1.0.0) (29.01.2019)
 
  ### Features
 
