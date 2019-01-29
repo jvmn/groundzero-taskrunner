@@ -1,6 +1,6 @@
 {
   "name": "@jvmn/groundzero-taskrunner",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Taskrunner for JvM/Neckar Groundzero projects",
   "keywords": [
     "taskrunner",
@@ -80,7 +80,7 @@
   "lint-staged": {
     "**/*.js": "eslint"
   },
-  "devDependencies": {
+  "dependencies": {
     "@frctl/fractal": "^1.1.7",
     "@babel/core": "^7.2.2",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
@@ -115,7 +115,9 @@
     "webpack": "^4.29.0",
     "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.2.1",
-    "webpack-merge": "^4.2.1",
+    "webpack-merge": "^4.2.1"
+  },
+  "devDependencies": {
     "@commitlint/cli": "^7.4.0",
     "@commitlint/config-conventional": "^7.3.1",
     "ajv": "^6.7.0",
@@ -124,7 +126,6 @@
     "husky": "^1.3.1",
     "lint-staged": "^8.1.1",
     "stylelint": "^9.10.1",
-    "stylelint-config-recommended": "^2.1.0",
-    "watch-cli": "^0.2.3"
+    "stylelint-config-recommended": "^2.1.0"
   }
 }

@@ -1,6 +1,15 @@
 
  *** 
 
+# [1.0.2](https://github.com/jvmn/groundzero-taskrunner/compare/1.0.1...1.0.2) (29.01.2019)
+
+ ### Bug Fixes
+
+* **webpack:**  remove resolveLoader with false path ([74519cd](https://github.com/jvmn/groundzero-taskrunner/commit/74519cd)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @29.01.2019_
+* **pkg:**  correct to dependencies again false commit ([40910ea](https://github.com/jvmn/groundzero-taskrunner/commit/40910ea)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @29.01.2019_
+
+ *** 
+
 # [1.0.1](https://github.com/jvmn/groundzero-taskrunner/compare/1.0.0...1.0.1) (29.01.2019)
 
  ### Bug Fixes
