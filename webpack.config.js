@@ -2,7 +2,6 @@ const path = require('path');
 const fs = require('fs');
 const srcPath = path.join(process.env.PROJECT_CWD, './develop/assets/js');
 const distPath = path.join(process.env.PROJECT_CWD, './web-ui/assets/js');
-const webpack = require('webpack');
 
 let babelConfig;
 
@@ -23,10 +22,6 @@ try {
 
 module.exports = {
     context: srcPath,
-
-    resolveLoader: {
-        modules: [process.env.PWD + '/node_modules']
-    },
 
     entry: {
         app: './app.js'
