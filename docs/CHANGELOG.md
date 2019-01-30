@@ -1,6 +1,14 @@
 
  *** 
 
+# [1.1.0](https://github.com/jvmn/groundzero-taskrunner/compare/1.0.2...1.1.0) (30.01.2019)
+
+ ### Features
+
+* **version:**  check for latest version in npm ([a78408f](https://github.com/jvmn/groundzero-taskrunner/commit/a78408f)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @30.01.2019_
+
+ *** 
+
 # [1.0.2](https://github.com/jvmn/groundzero-taskrunner/compare/1.0.1...1.0.2) (29.01.2019)
 
  ### Bug Fixes
