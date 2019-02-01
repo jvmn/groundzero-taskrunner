@@ -51,6 +51,7 @@
     "newpattern": "node ./lib/newpattern",
     "optimize:assets": "run-s copy:assets imagemin",
     "pkg:release": "groundzero-changelog",
+    "pkg:publish": "npm publish -- --access public",
     "precommit": "lint-staged",
     "predeploy": "run-s build",
     "release": "npm-run-all clean:release copy:assets:release release:sync:icons build:css:release release:webpack build:webpack:prod fractal:export -l --silent",
@@ -101,7 +102,7 @@
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^7.0.0",
     "imagemin-svgo": "^7.0.0",
-    "inquirer": "^6.2.1",
+    "inquirer": "^6.2.2",
     "lodash": "^4.17.11",
     "minimist": "^1.2.0",
     "natural-orderby": "^2.0.0",
@@ -118,8 +119,8 @@
     "webpack-merge": "^4.2.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^7.4.0",
-    "@commitlint/config-conventional": "^7.3.1",
+    "@commitlint/cli": "^7.5.0",
+    "@commitlint/config-conventional": "^7.5.0",
     "ajv": "^6.7.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.12.1",
