@@ -16,35 +16,39 @@ if (args.help || args.h) {
 }
 
 switch (cmd) {
-    case 'dev':
-        require('./cli/dev.js')
-        break
+case 'dev':
+    require('./cli/dev.js')
+    break
 
-    case 'build':
-        require('./cli/build')
-        break
-    
-    case 'release':
-        require('./cli/release')
-        break
+case 'build':
+    require('./cli/build')
+    break
 
-    case 'deploy':
-        require('./cli/deploy')
-        break
+case 'release':
+    require('./cli/release')
+    break
 
-    case 'newpattern':
-        require('./cli/newpattern')
-        break
+case 'deploy':
+    require('./cli/deploy')
+    break
 
-    case 'version':
-        require('./lib/version')(args)
-        break
+case 'newpattern':
+    require('./cli/newpattern')
+    break
 
-    case 'help':
-        require('./lib/help')(args)
-        break
+case 'version':
+    require('./lib/version')(args)
+    break
 
-    default:
-        error(`"${cmd}" is not a valid command!`, true)
-        break
+case 'update':
+    require('./lib/update')
+    break
+
+case 'help':
+    require('./lib/help')(args)
+    break
+
+default:
+    error(`"${cmd}" is not a valid command!`, true)
+    break
 }
