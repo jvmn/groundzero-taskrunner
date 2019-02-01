@@ -4,6 +4,8 @@
 
 In charge of running the dev / build / release / deploy / newpattern toolchain for groundzero projects by providing a simple CLI.
 
+*** This package is a dependencie of JvM/Neckar Groundzero, will not work as a standalone ***
+
 ## Installation
 
 1) npm install:
