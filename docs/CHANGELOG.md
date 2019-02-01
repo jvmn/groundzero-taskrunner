@@ -1,6 +1,17 @@
 
  *** 
 
+# [1.2.0](https://github.com/jvmn/groundzero-taskrunner/compare/1.1.1...1.2.0) (01.02.2019)
+
+ ### Chores
+
+* **package:**  update dependencies ([ba0c3fe](https://github.com/jvmn/groundzero-taskrunner/commit/ba0c3fe)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @01.02.2019_
+ ### Features
+
+* **update:**  update command for updateing pkg to latest version ([39fe90c](https://github.com/jvmn/groundzero-taskrunner/commit/39fe90c)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @01.02.2019_
+
+ *** 
+
 # [1.1.1](https://github.com/jvmn/groundzero-taskrunner/compare/1.1.0...1.1.1) (30.01.2019)
 
  ### Chores
