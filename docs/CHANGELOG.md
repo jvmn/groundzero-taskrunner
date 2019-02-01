@@ -1,6 +1,17 @@
 
  *** 
 
+# [1.2.1](https://github.com/jvmn/groundzero-taskrunner/compare/1.2.0...1.2.1) (01.02.2019)
+
+ ### Chores
+
+* **package:**  fix pkg-publish task typo ([b1ee968](https://github.com/jvmn/groundzero-taskrunner/commit/b1ee968)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @01.02.2019_
+ ### Code Refactoring
+
+* **onchange:**  use original package with chained path on globe ([cb78f31](https://github.com/jvmn/groundzero-taskrunner/commit/cb78f31)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @01.02.2019_
+
+ *** 
+
 # [1.2.0](https://github.com/jvmn/groundzero-taskrunner/compare/1.1.1...1.2.0) (01.02.2019)
 
  ### Chores
