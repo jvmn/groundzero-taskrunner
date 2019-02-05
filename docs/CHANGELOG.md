@@ -1,6 +1,14 @@
 
  *** 
 
+# [1.3.1](https://github.com/jvmn/groundzero-taskrunner/compare/1.3.0...1.3.1) (05.02.2019)
+
+ ### Bug Fixes
+
+* **critical-css:**  correct includePaths option in sass ([efc2e8f](https://github.com/jvmn/groundzero-taskrunner/commit/efc2e8f)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @05.02.2019_
+
+ *** 
+
 # [1.3.0](https://github.com/jvmn/groundzero-taskrunner/compare/1.2.1...1.3.0) (05.02.2019)
 
  ### Features
