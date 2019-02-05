@@ -3,6 +3,7 @@
 
 const minimist = require('minimist')
 const error = require('./lib/error.js')
+const criticalCss = require('./lib/critical-css.js').process
 const args = minimist(process.argv.slice(2))
 
 let cmd = args._[0] || 'help'
@@ -52,3 +53,7 @@ default:
     error(`"${cmd}" is not a valid command!`, true)
     break
 }
+
+module.exports = {
+    criticalCss
+};
