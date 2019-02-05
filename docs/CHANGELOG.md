@@ -1,6 +1,14 @@
 
  *** 
 
+# [1.3.0](https://github.com/jvmn/groundzero-taskrunner/compare/1.2.1...1.3.0) (05.02.2019)
+
+ ### Features
+
+* **critical-css:**  create inline critical css in pages, exported fn ([b422440](https://github.com/jvmn/groundzero-taskrunner/commit/b422440)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @05.02.2019_
+
+ *** 
+
 # [1.2.1](https://github.com/jvmn/groundzero-taskrunner/compare/1.2.0...1.2.1) (01.02.2019)
 
  ### Chores
