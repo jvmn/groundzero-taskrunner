@@ -1,6 +1,15 @@
 
  *** 
 
+# [1.3.2](https://github.com/jvmn/groundzero-taskrunner/compare/1.3.1...1.3.2) (07.02.2019)
+
+* **build-css:**  exclude critical files from sass on build ([3588bb0](https://github.com/jvmn/groundzero-taskrunner/commit/3588bb0)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @06.02.2019_
+ ### Code Refactoring
+
+* **build-css:**  better globs ([fc2bb11](https://github.com/jvmn/groundzero-taskrunner/commit/fc2bb11)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @07.02.2019_
+
+ *** 
+
 # [1.3.1](https://github.com/jvmn/groundzero-taskrunner/compare/1.3.0...1.3.1) (05.02.2019)
 
  ### Bug Fixes
