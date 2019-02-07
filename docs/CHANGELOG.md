@@ -1,6 +1,14 @@
 
  *** 
 
+# [1.3.3](https://github.com/jvmn/groundzero-taskrunner/compare/1.3.2...1.3.3) (07.02.2019)
+
+ ### Chores
+
+* **package:**  update dependencies ([5cddef7](https://github.com/jvmn/groundzero-taskrunner/commit/5cddef7)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @07.02.2019_
+
+ *** 
+
 # [1.3.2](https://github.com/jvmn/groundzero-taskrunner/compare/1.3.1...1.3.2) (07.02.2019)
 
 * **build-css:**  exclude critical files from sass on build ([3588bb0](https://github.com/jvmn/groundzero-taskrunner/commit/3588bb0)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @06.02.2019_
