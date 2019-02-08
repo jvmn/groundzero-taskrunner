@@ -1,5 +1,7 @@
 'use strict';
+const fs = require('fs');
 const path = require('path');
+const projectPath = require(path.resolve(process.env.PWD + '/paths.config.js'));
 const fractal = module.exports = require('@frctl/fractal').create();
 const bluebird = require('bluebird');
 const getPackageJsonPath = () => `${ process.env.PROJECT_CWD }/package.json`;
@@ -50,11 +52,11 @@ fractal.set('fileVars', {
 /**
  * set paths
  */
-fractal.web.set('builder.dest', process.env.PROJECT_CWD + '/build'); // destination for the build export
-fractal.web.set('static.path', process.env.PROJECT_CWD + '/web-ui'); // destination for the preview export
-fractal.docs.set('path', process.env.PROJECT_CWD + '/docs'); // location of the documentation directory.
-fractal.components.set('path', process.env.PROJECT_CWD + '/develop'); // location of the component directory.
-fractal.set('project.release', process.env.PROJECT_CWD + '/release'); // release directory to static assets and files for
+fractal.web.set('builder.dest', projectPath.build); // destination for the build export
+fractal.web.set('static.path', projectPath.webui); // destination for the preview export
+fractal.docs.set('path', projectPath.docs); // location of the documentation directory.
+fractal.components.set('path', projectPath.dev); // location of the component directory.
+fractal.set('project.release', projectPath.release); // release directory to static assets and files for
 fractal.components.set('default.context', {
     'gblSpriteSheet': '../../assets/img/sprite-icons/AP_sprite.svg'
 });
@@ -129,3 +131,28 @@ fractal.cli.command('check-errors', function(opts, done){
     });
     done();
 });
+
+// check if we have a fractal.hooks in project root
+try {
+    fs.accessSync(`${process.env.PROJECT_CWD}/fractal.hooks.js`, fs.constants.R_OK | fs.constants.W_OK);
+    const hooks = require(`${process.env.PROJECT_CWD}/fractal.hooks.js`).hooks
+    // scan and execute fractal hooks to overwrite our defaults
+    Object.keys(hooks).forEach(type => {
+        // get the type of hook 
+        Object.keys(hooks[type]).forEach(hook => {
+            // get hook name
+            // engine must be first required to be able to use the new config
+            if (hook === 'engine') { 
+                const customEngine = require(hooks[type][hook].key)(hooks[type][hook].cmd)
+                fractal[type][hook](customEngine)
+            } else {
+                hooks[type][hook].forEach(val => { 
+                    type === 'fractal' ? fractal[hook](val.key, val.cmd) : fractal[type][hook](val.key, val.cmd)
+                })
+            }
+        });
+    })
+    console.error('found hooks in project!');
+} catch (err) {
+    console.error('no hooks found in project!', err);
+}

@@ -1,6 +1,29 @@
 
  *** 
 
+# [1.4.0](https://github.com/jvmn/groundzero-taskrunner/compare/1.3.3...1.4.0) (08.02.2019)
+
+ ### Chores
+
+* **build-css:**  silent concat ([6c22eed](https://github.com/jvmn/groundzero-taskrunner/commit/6c22eed)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @08.02.2019_
+ ### Documentation
+
+* **rsync:**  branch comment ([7ae085a](https://github.com/jvmn/groundzero-taskrunner/commit/7ae085a)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @08.02.2019_
+* **hooks:**  added fractal hooks config sample ([f70b89f](https://github.com/jvmn/groundzero-taskrunner/commit/f70b89f)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @08.02.2019_
+ ### Features
+
+* **fractal-config:**  hooks to overwrite fractal defaults from project ([00a05f3](https://github.com/jvmn/groundzero-taskrunner/commit/00a05f3)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @08.02.2019_
+* **path-config:**  new project paths config ([31e26bc](https://github.com/jvmn/groundzero-taskrunner/commit/31e26bc)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @08.02.2019_
+ ### Bug Fixes
+
+* **build-css:**  throw err if folder exists ([a96b8c5](https://github.com/jvmn/groundzero-taskrunner/commit/a96b8c5)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @08.02.2019_
+ ### Code Refactoring
+
+* **build-css:**  support imports in sass, use project paths ([2160670](https://github.com/jvmn/groundzero-taskrunner/commit/2160670)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @08.02.2019_
+* **lib:**  use project paths instead of fractal config paths ([4e0cb0e](https://github.com/jvmn/groundzero-taskrunner/commit/4e0cb0e)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @08.02.2019_
+
+ *** 
+
 # [1.3.3](https://github.com/jvmn/groundzero-taskrunner/compare/1.3.2...1.3.3) (07.02.2019)
 
  ### Chores
