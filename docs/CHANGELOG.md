@@ -1,6 +1,17 @@
 
  *** 
 
+# [1.5.0](https://github.com/jvmn/groundzero-taskrunner/compare/1.4.0...1.5.0) (19.02.2019)
+
+ ### Chores
+
+* **package:**  update dependencies ([b8c86b7](https://github.com/jvmn/groundzero-taskrunner/commit/b8c86b7)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @19.02.2019_
+ ### Features
+
+* **release:**  added pretty to beautify html output on release task ([00a0722](https://github.com/jvmn/groundzero-taskrunner/commit/00a0722)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @19.02.2019_
+
+ *** 
+
 # [1.4.0](https://github.com/jvmn/groundzero-taskrunner/compare/1.3.3...1.4.0) (08.02.2019)
 
  ### Chores
