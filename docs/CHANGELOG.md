@@ -1,6 +1,17 @@
 
  *** 
 
+# [1.5.1](https://github.com/jvmn/groundzero-taskrunner/compare/1.5.0...1.5.1) (20.02.2019)
+
+ ### Chores
+
+* **package:**  update dependencies ([a0877c9](https://github.com/jvmn/groundzero-taskrunner/commit/a0877c9)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @20.02.2019_
+ ### Code Refactoring
+
+* **release:**  add ocd to pretty ([371b6c9](https://github.com/jvmn/groundzero-taskrunner/commit/371b6c9)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @20.02.2019_
+
+ *** 
+
 # [1.5.0](https://github.com/jvmn/groundzero-taskrunner/compare/1.4.0...1.5.0) (19.02.2019)
 
  ### Chores
