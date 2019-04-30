@@ -1,6 +1,14 @@
 
  *** 
 
+# [1.5.2](https://github.com/jvmn/groundzero-taskrunner/compare/1.5.1...1.5.2) (30.04.2019)
+
+ ### Bug Fixes
+
+* **criticalcss:**  font paths ([60dcd10](https://github.com/jvmn/groundzero-taskrunner/commit/60dcd10)) _by [Oliver Müller](oliver.mueller@jvm.de) @30.04.2019_
+
+ *** 
+
 # [1.5.1](https://github.com/jvmn/groundzero-taskrunner/compare/1.5.0...1.5.1) (20.02.2019)
 
  ### Chores
