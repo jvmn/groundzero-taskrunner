@@ -49,6 +49,10 @@ case 'help':
     require('./lib/help')(args)
     break
 
+case 'jest':
+    require('./cli/jest.js')
+    break
+
 default:
     error(`"${cmd}" is not a valid command!`, true)
     break
