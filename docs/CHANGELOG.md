@@ -1,6 +1,14 @@
 
  *** 
 
+# [1.5.3](https://github.com/jvmn/groundzero-taskrunner/compare/1.5.2...1.5.3) (23.05.2019)
+
+ ### Bug Fixes
+
+* **deploy:**  check feature ([254b94d](https://github.com/jvmn/groundzero-taskrunner/commit/254b94d)) _by [Oliver Müller](oliver.mueller@jvm.de) @23.05.2019_
+
+ *** 
+
 # [1.5.2](https://github.com/jvmn/groundzero-taskrunner/compare/1.5.1...1.5.2) (30.04.2019)
 
  ### Bug Fixes
