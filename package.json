@@ -93,7 +93,7 @@
     "@babel/preset-env": "^7.3.1",
     "@frctl/fractal": "^1.1.7",
     "@jvmn/groundzero-changelog": "^1.6.1",
-    "@jvmn/upload-rsync": "0.0.8",
+    "@jvmn/upload-rsync": "^0.0.9",
     "autoprefixer": "^9.4.8",
     "babel-loader": "^8.0.5",
     "browser-sync": "^2.26.3",
