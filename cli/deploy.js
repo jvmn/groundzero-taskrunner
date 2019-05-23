@@ -28,15 +28,15 @@ try {
 }
 
 let options = '';
-
 if (args.all) {
     options = ':all'
-} else if (args.all && args.feature) {
-    options = ':feature:all'
-} else if (args.stage && args.feature) { 
-    options = ':feature:stage'
-} else if (args.stage) { 
-    options = ':stage'
+} else {
+    if (args.stage) {
+        options = ':stage'
+    }
+}
+if (args.feature) {
+    options = ':feature' + options
 }
 
 const child = spawn(`npm explore @jvmn/groundzero-taskrunner -- npm run deploy${options}`, {
