@@ -1,6 +1,31 @@
 
  *** 
 
+# [1.6.0](https://github.com/jvmn/groundzero-taskrunner/compare/1.5.3...1.6.0) (11.07.2019)
+
+ ## Breaking changes 
+ Removed changelog task from release task. Now one should handle the changelog directly in the project.
+ 
+ One can split the changelog and the next step log or just run the changelog in either the pre or post release script. 
+ 
+ Example with logNextSteps option set to false:
+```json
+    "prerelease": "groundzero-changelog",
+    "release": "groundzero release",
+    "postrelease": "groundzero-changelog-next",
+```
+**one can read more in the changelog package [https://github.com/jvmn/groundzero-changelog](https://github.com/jvmn/groundzero-changelog)*
+ ### Chores
+
+* **package:**  update dependencies ([1f860b2](https://github.com/jvmn/groundzero-taskrunner/commit/1f860b2)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @11.07.2019_
+ ### Features
+
+* **build-css:**  scss to css error handling ([7ccb965](https://github.com/jvmn/groundzero-taskrunner/commit/7ccb965)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @11.07.2019_
+* **release:**  remove changelog, handle in project ([2aff854](https://github.com/jvmn/groundzero-taskrunner/commit/2aff854)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @11.07.2019_
+* **cssbuild:**  render project version ([b57b75d](https://github.com/jvmn/groundzero-taskrunner/commit/b57b75d)) _by [Oliver Müller](oliver.mueller@jvm.de) @27.05.2019_
+
+ *** 
+
 # [1.5.3](https://github.com/jvmn/groundzero-taskrunner/compare/1.5.2...1.5.3) (23.05.2019)
 
  ### Bug Fixes

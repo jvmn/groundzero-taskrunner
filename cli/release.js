@@ -34,7 +34,7 @@ try {
     process.env.SPRITE_CONFIG = `./svg-sprite.config.js`
 }
 
-const child = spawn('npm explore @jvmn/groundzero-taskrunner -- npm run release && npm run changelog', {
+const child = spawn('npm explore @jvmn/groundzero-taskrunner -- npm run release', {
     stdio: 'inherit',
     env: process.env,
     shell: true
