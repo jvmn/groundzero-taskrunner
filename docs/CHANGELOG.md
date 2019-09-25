@@ -1,6 +1,14 @@
 
  *** 
 
+# [1.6.1](https://github.com/jvmn/groundzero-taskrunner/compare/1.6.0...1.6.1) (25.09.2019)
+
+ ### Bug Fixes
+
+* **npm:**  use prod config for build:webpack:prod script ([524d843](https://github.com/jvmn/groundzero-taskrunner/commit/524d843)) _by [Ralf Heller](ralf.heller@jvm.de) @19.09.2019_
+
+ *** 
+
 # [1.6.0](https://github.com/jvmn/groundzero-taskrunner/compare/1.5.3...1.6.0) (11.07.2019)
 
  ## Breaking changes 
