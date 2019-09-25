@@ -1,6 +1,6 @@
 {
   "name": "@jvmn/groundzero-taskrunner",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "Taskrunner for JvM/Neckar Groundzero projects",
   "keywords": [
     "taskrunner",
@@ -28,7 +28,7 @@
     "build:icons:release": "svg-sprite --config $SPRITE_CONFIG -D $PROJECT_CWD/release/assets/img/sprite-icons $PROJECT_CWD/develop/assets/img/sprite-icons/*.svg",
     "build:styleguide": "node ./lib/build-css --styleguide",
     "build:webpack": "webpack --config $WEBPACK_DEV_CONFIG",
-    "build:webpack:prod": "webpack --config $WEBPACK_DEV_CONFIG --output-path $PROJECT_CWD/release/assets/js",
+    "build:webpack:prod": "webpack --config $WEBPACK_PROD_CONFIG --output-path $PROJECT_CWD/release/assets/js",
     "clean:build": "node ./lib/clean --build",
     "clean:fractal": "node ./lib/clean --webui",
     "clean:release": "node ./lib/clean --release",
