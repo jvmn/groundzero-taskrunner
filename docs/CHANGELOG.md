@@ -1,6 +1,21 @@
 
  *** 
 
+# [1.6.2](https://github.com/jvmn/groundzero-taskrunner/compare/1.6.1...1.6.2) (14.10.2019)
+
+ ### Notes
+ * Forced fractal to version 1.1.7 seems like version 1.2.0 generates a corrupted package.json should be revisited in the future.
+
+ ### Chores
+
+* **package:**  update dependencies ([3a651a7](https://github.com/jvmn/groundzero-taskrunner/commit/3a651a7)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @14.10.2019_
+ ### Code Refactoring
+
+* **copy:**  use fs-extra instead of copydir ([3c1e586](https://github.com/jvmn/groundzero-taskrunner/commit/3c1e586)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @14.10.2019_
+* **clean:**  use fs-extra instead of del ([7b50224](https://github.com/jvmn/groundzero-taskrunner/commit/7b50224)) _by [Shachar Leuchter](shachar.leuchter@jvm.de) @14.10.2019_
+
+ *** 
+
 # [1.6.1](https://github.com/jvmn/groundzero-taskrunner/compare/1.6.0...1.6.1) (25.09.2019)
 
  ### Bug Fixes
