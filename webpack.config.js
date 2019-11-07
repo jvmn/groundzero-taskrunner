@@ -2,7 +2,8 @@ const path = require('path');
 const fs = require('fs');
 const srcPath = path.join(process.env.PROJECT_CWD, './develop/assets/js');
 const distPath = path.join(process.env.PROJECT_CWD, './web-ui/assets/js');
-
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const isDevelopment = process.env.NODE_ENV === 'development'
 let babelConfig;
 
 try {
@@ -32,8 +33,14 @@ module.exports = {
         chunkFilename: 'jvm-[name].bundle.js',
         filename: 'jvm-[name].bundle.js'
     },
-
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: isDevelopment ? '[name].css' : '[name].[hash].css',
+            chunkFilename: isDevelopment ? '[id].css' : '[id].[hash].css'
+        })
+    ],
     resolve: {
+        extensions: ['.js', '.scss'],
         alias: {
             base: path.resolve(process.env.PROJECT_CWD),
             dev: path.resolve(process.env.PROJECT_CWD, 'develop/'),
@@ -48,6 +55,50 @@ module.exports = {
 
     module: {
         rules: [
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    // Creates `style` nodes from JS strings
+                    'style-loader',
+                    // Translates CSS into CommonJS
+                    'css-loader',
+                    // Compiles Sass to CSS
+                    'sass-loader',
+                ],
+            },
+            // {
+            //     test: /\.module\.scss$/,
+            //     loader: [
+            //         'style-loader',
+            //         {
+            //             loader: 'css-loader',
+            //             options: {
+            //                 modules: true,
+            //                 sourceMap: true
+            //             }
+            //         },
+            //         {
+            //             loader: 'sass-loader',
+            //             options: {
+            //                 sourceMap: true
+            //             }
+            //         }
+            //     ]
+            // },
+            // {
+            //     test: /\.scss$/,
+            //     exclude: /\.module.(scss)$/,
+            //     loader: [
+            //         'style-loader',
+            //         'css-loader',
+            //         {
+            //             loader: 'sass-loader',
+            //             options: {
+            //                 sourceMap: true
+            //             }
+            //         }
+            //     ]
+            // },
             {
                 test: /^(?!.*\.config\.js$).*\.js$/,
                 exclude: /(node_modules)/,
