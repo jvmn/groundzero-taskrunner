@@ -1,27 +1,24 @@
 /**
- * <%= title %>
- */
+* <%= title %>
+*/
 .AP_<%= patternname %> {
-    .AP_<%= patternprefix %>-ct {
-        position: relative;
-    }
+  .AP_<%= patternprefix %>-ct {
+    position: relative;
+  }
 
-    /**
-     * Major BP Tablet
-     */
-    @include respond-to($bp-xs) {
-
-    }
-    /**
-     * Major BP Desktop
-     */
-    @include respond-to($bp-m) {
-
-    }
-    /**
-     * Major BP Desktop large
-     */
-    @include respond-to($bp-l) {
-
-    }
+  /**
+  * Major BP Tablet
+  */
+  @include respond-to($bp-xs) {
+  }
+  /**
+  * Major BP Desktop
+  */
+  @include respond-to($bp-m) {
+  }
+  /**
+  * Major BP Desktop large
+  */
+  @include respond-to($bp-l) {
+  }
 }

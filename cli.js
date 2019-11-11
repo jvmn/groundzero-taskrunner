@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-'use strict';
+'use strict'
 
 const minimist = require('minimist')
 const error = require('./lib/error.js')
@@ -9,55 +9,55 @@ const args = minimist(process.argv.slice(2))
 let cmd = args._[0] || 'help'
 
 if (args.version || args.v) {
-    cmd = 'version'
+  cmd = 'version'
 }
 
 if (args.help || args.h) {
-    cmd = 'help'
+  cmd = 'help'
 }
 
 switch (cmd) {
 case 'dev':
-    require('./cli/dev.js')
-    break
+  require('./cli/dev.js')
+  break
 
 case 'build':
-    require('./cli/build')
-    break
+  require('./cli/build')
+  break
 
 case 'release':
-    require('./cli/release')
-    break
+  require('./cli/release')
+  break
 
 case 'deploy':
-    require('./cli/deploy')
-    break
+  require('./cli/deploy')
+  break
 
 case 'newpattern':
-    require('./cli/newpattern')
-    break
+  require('./cli/newpattern')
+  break
 
 case 'version':
-    require('./lib/version')(args)
-    break
+  require('./lib/version')(args)
+  break
 
 case 'update':
-    require('./lib/update')
-    break
+  require('./lib/update')
+  break
 
 case 'help':
-    require('./lib/help')(args)
-    break
+  require('./lib/help')(args)
+  break
 
 case 'jest':
-    require('./cli/jest.js')
-    break
+  require('./cli/jest.js')
+  break
 
 default:
-    error(`"${cmd}" is not a valid command!`, true)
-    break
+  error(`"${cmd}" is not a valid command!`, true)
+  break
 }
 
 module.exports = {
-    criticalCss
-};
+  criticalCss
+}
