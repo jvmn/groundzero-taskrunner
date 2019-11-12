@@ -2,7 +2,7 @@
 'use strict'
 
 const { spawn } = require('child_process')
-
+const error = require('../lib/error')
 console.log("running jest")
 // we expose the project path to correctly use it within the tasks 
 process.env.PROJECT_CWD = process.env.PWD
@@ -14,6 +14,10 @@ const child = spawn('npm explore @jvmn/groundzero-taskrunner -- npm run jest' + 
   stdio: 'inherit',
   env: process.env,
   shell: true
+})
+
+child.on('error', err => {
+  error(`CLI Jest -> ${err}`, true)
 })
 
 if (child.stdin) {
