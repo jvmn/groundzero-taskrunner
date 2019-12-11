@@ -80,7 +80,7 @@ fractal.web.set('server', {
     // browser: ['google chrome'],
     notify: true,
     watchOptions: {
-      ignored: '/**/*.scss',
+      ignored: ['/**/*.scss'],
       ignoreInitial: true,
       files: [],
     }

@@ -2,7 +2,9 @@ const fs = require('fs')
 const path = require('path')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const TerserJSPlugin = require('terser-webpack-plugin')
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const getProjectJsonPath = () => `${process.env.PROJECT_CWD}/package.json`
 const VERSION = require(getProjectJsonPath()).version
@@ -24,40 +26,34 @@ try {
 
 module.exports = merge(baseConfig, {
   mode: 'production',
-
+  devtool: 'source-map',
   output: {
     path: distPath,
-    chunkFilename: 'jvm-[name].min.bundle.js',
-    filename: 'jvm-[name].min.bundle.js'
+    chunkFilename: 'jvm-[name]-[hash].min.js',
+    filename: 'jvm-[name].min.js'
   },
-
   optimization: {
-    minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
-        sourceMap: false, // set to true if you want JS source maps on production
-        uglifyOptions: {
-          // mangle: false,
-          output: {
-            comments: /^\**!/
-          },
-          compress: {
-            drop_console: true,
-            unused: false
-          }
-        }
-      }),
-    ]
+    minimizer: [new TerserJSPlugin({}), new OptimizeCssAssetsPlugin({})],
   },
-
   plugins: [
+    new MiniCssExtractPlugin({
+      // path is relative to the distPath, see prod path
+      filename: '../../css/[name].min.css',
+      chunkFilename:'../../css/[id].[hash].css'
+    }),
+    new OptimizeCssAssetsPlugin({
+      cssProcessor: require('cssnano'),
+      cssProcessorPluginOptions: {
+        preset: ['default', { discardComments: { removeAll: true } }],
+      },
+      canPrint: true
+    }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static'
     }),
     new webpack.BannerPlugin({
       // print comments on top of each bundle file
-      banner: `Release version: ${JSON.stringify(VERSION)}, Build date: ${JSON.stringify(FULLBUILD)}, hash:[hash], chunkhash:[chunkhash], name:[name]`
+      banner: `! @preserve: Release version: ${JSON.stringify(VERSION)}, Build date: ${JSON.stringify(FULLBUILD)}, hash:[hash], chunkhash:[chunkhash], name:[name]`
     }),
     // don't create too small chunks here..
     // if you only want one large chunk you can set this to higher values

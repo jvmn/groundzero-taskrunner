@@ -16,6 +16,15 @@ try {
   console.log('-> using webpack.dev package config!')
   process.env.WEBPACK_DEV_CONFIG = `./webpack.dev.js`
 }
+// check if we have a webpack.critical config in project root
+try {
+  fs.accessSync(`${ process.env.PROJECT_CWD }/webpack.critical.js`, fs.constants.R_OK | fs.constants.W_OK)
+  process.env.WEBPACK_CRITICAL_CONFIG = `${process.env.PROJECT_CWD}/webpack.critical.js`
+  console.log('-> using webpack.critical project config!')
+} catch (err) {
+  console.log('-> using webpack.critical package config!')
+  process.env.WEBPACK_CRITICAL_CONFIG = `./webpack.critical.js`
+}
 // check if we have a svg-sprite config in project root
 try {
   fs.accessSync(`${ process.env.PROJECT_CWD }/svg-sprite.config.json`, fs.constants.R_OK | fs.constants.W_OK)
@@ -26,7 +35,7 @@ try {
   process.env.SPRITE_CONFIG = `./svg-sprite.config.json`
 }
 
-const child = spawn('npm explore @jvmn/groundzero-taskrunner -- npm run dev', {
+const child = spawn('npm explore @jvmn/groundzero-taskrunner-webpack -- npm run dev', {
   stdio: 'inherit',
   env: process.env,
   shell: true

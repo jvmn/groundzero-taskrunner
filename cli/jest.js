@@ -10,7 +10,7 @@ process.env.PROJECT_CWD = process.env.PWD
 let options = ' --'
 options += ' --projects ' + process.env.PROJECT_CWD
 
-const child = spawn('npm explore @jvmn/groundzero-taskrunner -- npm run jest' + options, {
+const child = spawn('npm explore @jvmn/groundzero-taskrunner-webpack -- npm run jest' + options, {
   stdio: 'inherit',
   env: process.env,
   shell: true

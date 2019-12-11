@@ -10,7 +10,7 @@ In charge of running the dev / build / release / deploy / newpattern toolchain f
 
 1) npm install:
     ```
-    npm install @jvmn/groundzero-taskrunner --save-dev
+    npm install @jvmn/groundzero-taskrunner-webpack --save-dev
     ```
 
 2) get all coomand options by running from the terminal:

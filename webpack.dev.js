@@ -17,6 +17,19 @@ try {
 
 module.exports = merge(baseConfig, {
   mode: 'development',
-  // devtool: '#inline-source-map', // for speed
-  devtool: 'source-map', // for debugging
+  stats: {
+    assets: false,
+    cached: false,
+    cachedAssets: false,
+    entrypoints: false,
+    hash: false,
+    children: false,
+    reasons: false,
+    version: false,
+    outputPath: false,
+    chunkOrigins: false,
+    colors: true
+  },
+  devtool: '#inline-source-map', // for speed
+  // devtool: 'source-map', // for debugging
 })

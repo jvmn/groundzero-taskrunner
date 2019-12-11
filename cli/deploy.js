@@ -40,7 +40,7 @@ if (args.feature) {
   options = ':feature' + options
 }
 
-const child = spawn(`npm explore @jvmn/groundzero-taskrunner -- npm run deploy${options}`, {
+const child = spawn(`npm explore @jvmn/groundzero-taskrunner-webpack -- npm run deploy${options}`, {
   stdio: 'inherit',
   env: process.env,
   shell: true
