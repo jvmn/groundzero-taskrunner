@@ -2,9 +2,23 @@
     "extends": "eslint:recommended",
     "root": true,
     "rules": {
-        "indent": ["error", 4],
+        "indent": [
+            "error",
+            4
+        ],
         "no-undef": 0,
-        "no-console": ["error", { "allow": ["log", "warn", "error", "info", "table"] }]
+        "no-console": [
+            "error",
+            {
+                "allow": [
+                    "log",
+                    "warn",
+                    "error",
+                    "info",
+                    "table"
+                ]
+            }
+        ]
     },
     "env": {
         "node": true,
