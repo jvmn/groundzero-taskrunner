@@ -1,5 +1,4 @@
-const webpack = require('webpack');
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const fs = require('fs');
 console.log('using webpack.dev from project')
 let baseConfig;

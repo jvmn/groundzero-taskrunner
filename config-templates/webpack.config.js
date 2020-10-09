@@ -2,7 +2,6 @@ const path = require('path');
 const fs = require('fs');
 const srcPath = path.join(process.env.PROJECT_CWD, './develop/assets/js');
 const distPath = path.join(process.env.PROJECT_CWD, './web-ui/assets/js');
-const webpack = require('webpack');
 console.log('using webpack.config from project')
 let babelConfig;
 
