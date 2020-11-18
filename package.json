@@ -1,6 +1,6 @@
 {
   "name": "@jvmn/groundzero-taskrunner",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "Taskrunner for JvM/Neckar Groundzero projects",
   "keywords": [
     "taskrunner",
