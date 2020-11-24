@@ -1,9 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const { merge } = require('webpack-merge');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const VERSION = require("./package.json").version;
 const FULLBUILD = new Date();
 const distPath = path.join(__dirname, './release/assets/js/min');
@@ -33,26 +32,17 @@ module.exports = merge(baseConfig, {
     
     optimization: {
         minimizer: [
-            new UglifyJsPlugin({
+            new TerserPlugin({
                 cache: true,
                 parallel: true,
-                sourceMap: false, // set to true if you want JS source maps on production
-                uglifyOptions: {
-                    // mangle: false,
-                    output: {
-                        comments: /^\**!/
-                    },
-                    compress: {
-                        drop_console: true,
-                        unused: false
-                    }
+                terserOptions: {
+                    // https://github.com/webpack-contrib/terser-webpack-plugin#terseroptions
                 }
-            }),
+            })
         ]
     },
 
     plugins: [
-        new CleanWebpackPlugin([distPath]),
         new BundleAnalyzerPlugin({
             analyzerMode: 'static'
         }),

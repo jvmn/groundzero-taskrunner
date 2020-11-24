@@ -3,10 +3,7 @@ module.exports = function (api) {
     api.cache(true);
 
     const presets = [
-        ["@babel/env", {
-            // for uglifyjs...
-            forceAllTransforms: process.env === "production"
-        }],
+        ["@babel/env"],
     ];
     const plugins = [];
 
